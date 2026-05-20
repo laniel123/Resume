@@ -1,0 +1,175 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Jake Gutierrez
+% Based on: https://github.com/sb2nov/resume
+% License: MIT
+%------------------------
+ 
+\documentclass[letterpaper,11pt]{article}
+\usepackage{lmodern}
+ 
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+ 
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.08003pt}
+ 
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+ 
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+ 
+\pdfgentounicode=1
+ 
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+ 
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+ 
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+ 
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+ 
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+ 
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+ 
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+ 
+%-------------------------------------------
+\begin{document}
+ 
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Daniel Larson} \\ \vspace{1pt}
+    \small 661-476-0817 $|$ \href{mailto:lanieldarson@gmail.com}{\underline{lanieldarson@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/daniellarson1}{\underline{linkedin.com/in/daniellarson1}} $|$
+    \href{https://github.com/laniel123}{\underline{github.com/laniel123}}
+\end{center}
+ 
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Santa Barbara}{Santa Barbara, CA}
+      {B.S. in Statistics and Data Science $|$ GPA: 3.2}{Sept. 2024 -- Jun. 2026}
+      \resumeItemListStart
+        \resumeItem{Relevant Courses: Principles of Data Science, Regression Analysis, Applied Stochastic Processes, Statistical Learning, Design and Analysis of Experiments.}
+      \resumeItemListEnd
+      \resumeSubheading
+      {College of the Canyons}{Santa Clarita, CA}
+      {Completed IGETC certified coursework $|$ General Chemistry I \& II, Statistics, Calculus I \& II}{Jun. 2021 -- Jun. 2024}
+      \resumeSubHeadingListEnd
+      
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Warehouse Specialist}{Feb. 2024 -- Oct. 2024}
+      {Dorsal}{Santa Clarita, CA}
+      \resumeItemListStart
+        \resumeItem{Increased production efficiency by examining material preparation, contributing to a smoother assembly flow and reducing downtime.}
+        \resumeItem{Consistently met shipment deadlines by collaborating with team members and adapting quickly to fluctuating order volumes.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      
+      \resumeProjectHeading
+        {\textbf{SpiceRack} $|$ \emph{Python, Scikit-learn, Flask, TF-IDF, K-Means, SQLite}}{Oct. 2024 -- Present}
+        \resumeItemListStart
+        \resumeItem{Led a team of developers as project manager to design and deliver a recipe recommendation web app, coordinating task delegation and technical decisions across the full development lifecycle.}
+        \resumeItem{Architected a TF-IDF vectorization pipeline with IDF² boosting and TruncatedSVD compression trained on 1.7M+ recipes, achieving a silhouette score of 0.80 across \textasciitilde475 clusters to ensure high-quality recommendations.}
+        \resumeItem{Engineered a top-K cluster search with cosine similarity ranking and thread-safe Unsplash API image caching, reducing recommendation latency and enabling seamless AJAX-powered interactions.}
+        \resumeItem{Selected as a finalist in the UCSB Data Science Club Project Showcase out of 100+ competing student teams.}
+        \resumeItemListEnd
+ 
+      \resumeProjectHeading
+        {\textbf{MLB Pitcher Injury Risk Prediction} $|$ \emph{R, XGBoost, K-Means, tidymodels}}{Jan. 2026 -- Mar. 2026}
+        \resumeItemListStart
+          \resumeItem{Analyzed 30 years of MLB pitching data from the Lahman Database to predict pitcher injury risk in the following season using supervised and unsupervised ML methods.}
+          \resumeItem{Built and compared 4 machine learning models (logistic regression, elastic net, random forest, XGBoost), identifying total innings pitched -- including postseason -- as the leading risk factor.}
+          \resumeItem{Applied K-means clustering to segment pitchers into 3 workload archetypes; the highest-workload group showed nearly double the injury rate (26.6\%) compared to the lowest (14.1\%).}
+          \resumeItem{Optimized the final model to flag 80\% of at-risk pitchers correctly, with the top 10\% highest-risk group injured at a 53.6\% rate -- nearly 3x the 19\% baseline average.}
+        \resumeItemListEnd
+        
+ 
+    \resumeSubHeadingListEnd
+ 
+%-----------CLUBS-----------
+\section{Clubs}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{Gaucho Gaming (UCSB)} $|$ \emph{Community Engagement Staff}}{Jan. 2026 -- Present}
+        \resumeItemListStart
+          \resumeItem{Coordinated with officers to support community initiatives, online events, and engagement efforts, improving member experience and retention.}
+          \resumeItem{Represented the organization professionally while contributing to a safe and inclusive community environment.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Data Science Club (UCSB)} $|$ \emph{Python, Pandas, NumPy, SQL}}{Oct. 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Won ``Best Sports Analyst Project'' at Datathon 2025 and was selected as a 2-time Project Pitchfire Finalist (SpiceRack, Anti-DUI) among competing student teams.}
+            \resumeItem{Developed communication and presentation skills by participating in networking events and resume workshops.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+ 
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, R, SQLite, C++} \\
+     \textbf{Libraries and Frameworks}{: Pandas, NumPy, Matplotlib, Scikit-Learn, XGBoost, tidymodels} \\
+     \textbf{Tools}{: Git, GitHub, VS Code, PyCharm, Jupyter Notebook} \\
+     \textbf{Achievements}{: Datathon 2025 -- Best Sports Analyst Project, 2x Project Pitchfire Finalist (SpiceRack, Anti-DUI)}    }}
+ \end{itemize}
+ 
+\end{document}

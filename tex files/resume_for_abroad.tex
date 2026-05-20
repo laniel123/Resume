@@ -1,0 +1,204 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Jake Gutierrez
+% Based on: https://github.com/sb2nov/resume
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% CIEE/GLINT guide asks for Times New Roman or Arial (10–12pt).
+% Using mathptmx for Times-like font.
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeCategory}[1]{
+  \vspace{4pt}
+  \textbf{#1}\\[-6pt]
+  \rule{0.25\textwidth}{0.4pt}
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+% CIEE-required header fields: professional email, home address (city/state ok),
+% local/CIEE address, WhatsApp username, and phone.
+\begin{center}
+    \textbf{\Huge \scshape Daniel Larson} \\
+    \vspace{1pt}
+    Phone: +1 (661) 476-0817 \\
+    Email: \href{mailto:lanieldarson@gmail.com}{lanieldarson@gmail.com} \\
+    WhatsApp Username: +1 (661) 476-0817 \\
+    Santa Clarita, CA, USA \\
+    Shanghai, China \\
+    \href{https://www.linkedin.com/in/daniellarson1}{linkedin.com/in/daniellarson1} $|$
+    \href{https://github.com/laniel123}{github.com/laniel123}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {University of California, Santa Barbara}{Santa Barbara, CA}
+      {B.S. Statistics and Data Science}{Sept. 2024 -- Jun. 2027}
+      \resumeItemListStart
+        \resumeItem{Relevant Coursework: Principles of Data Science (R), Probability and Statistics, Vector Calculus, Differential Equations, Regression Analysis, Applied Stochastic Processes}
+        \resumeItem{Relevant Skills: Python, R, SQL, Statistics, Mathematics}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {College of the Canyons}{Santa Clarita, CA}
+      {General Education}{Aug. 2021 -- Jun. 2024}
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    % Work Experience
+    \resumeSubheading
+      {Dorsal}{Santa Clarita, CA}
+      {Warehouse Specialist}{Feb. 2024 -- Oct. 2024}
+      \resumeItemListStart
+        \resumeItem{Increased production efficiency by examining material preparation, contributing to smoother assembly flow and reduced downtime.}
+        \resumeItem{Introduced workflow improvements that boosted daily output.}
+        \resumeItem{Met shipment deadlines by collaborating with team members and adapting quickly to fluctuating order volume.}
+        \resumeItem{Reduced risk of product returns by assembling specialty floor lock drains to specification.}
+        \resumeItem{Built manufacturing and warehouse operations skills, reinforcing strategic problem-solving under pressure.}
+      \resumeItemListEnd
+
+    % Academic Project Experience
+    \resumeSubheading
+      {Data Science Club, UCSB}{Santa Barbara, CA}
+      {Academic Project: Anti-DUI BAC Estimation}{Oct. 2024 -- Jun. 2025}
+      \resumeItemListStart
+        \resumeItem{Collaborated with teammates on a regression-based project estimating blood alcohol concentration (BAC).}
+        \resumeItem{Built a locally run web app to support safer decision-making by estimating safe consumption levels.}
+        \resumeItem{Performed data cleaning, feature engineering, and model evaluation to improve accuracy and usability.}
+        \resumeItem{Selected as a project finalist in the UCSB Project Showcase event.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------ACTIVITIES (Optional per guide; renamed from Clubs)-----------
+\section{Activities}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Data Science Club (UCSB)} $|$ \emph{Python, Pandas, NumPy, SQL}}{\textit{Oct. 2024 -- Present}}
+      \resumeItemListStart
+        \resumeItem{Collaborated on a prediction-based Datathon 2025 project; received the ``Best Sports Analyst Project'' award.}
+        \resumeItem{Selected as a 2025 Project Pitchfire Finalist.}
+        \resumeItem{Strengthened communication and presentation skills through networking events and resume workshops.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Gaucho Gaming (UCSB)} $|$ \emph{Community Engagement Intern}}{\textit{Sept. 2025 -- Present}}
+      
+      \resumeItemListStart
+        \resumeItem{Collaborate with officers to support the community's initiatives and event operations.}
+        \resumeItem{Communicate proactively and consistently fulfill assigned responsibilities.}
+        \resumeItem{Support online events and engagement efforts to improve member experience and retention.}
+        \resumeItem{Represent the organization professionally while helping maintain a safe and inclusive community space.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS (Required)-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Python, R, SQL/SQLite, C++.} \\
+     \textbf{Libraries and Frameworks}{: Pandas, NumPy, Matplotlib, Requests, PyAutoGUI, scikit-learn, XGBoost.} \\
+     \textbf{Tools and Software}{: Git/GitHub, VS Code, PyCharm, Jupyter Notebook.} \\
+     \textbf{Languages}{: English (Native), Spanish (Conversational), Chinese (Elementary).} \\
+     \textbf{Achievements}{: Datathon 2025 -- Best Sports Analyst Project; UCSB Project Showcase -- Finalist.}
+    }}
+ \end{itemize}
+\end{document}
