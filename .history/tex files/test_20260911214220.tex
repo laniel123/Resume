@@ -1,0 +1,180 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.2in}
+\setlength{\footskip}{4.08003pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\fontsize{16}{18}\selectfont \scshape Daniel Larson} \\ \vspace{1pt}
+    \small 661-476-0817 $|$ Santa Clarita, CA $|$ \href{mailto:lanieldarson@gmail.com}{\underline{lanieldarson@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/daniellarson1}{\underline{linkedin.com/in/daniellarson1}} $|$
+    \href{https://github.com/laniel123}{\underline{github.com/laniel123}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Santa Barbara}{Santa Barbara, CA}
+      {B.S. in Statistics and Data Science $|$ GPA: 3.50}{Sep. 2024 -- Dec. 2026}
+      \resumeItemListStart
+        \resumeItem{Relevant Courses: Principles of Data Science, Regression Analysis,
+        Applied Stochastic Processes, Statistical Learning, Design and Analysis of Experiments,
+        Time Series, Big Data Analysis, STAT Data Science.}
+      \resumeItemListEnd
+      \resumeSubheading
+      {College of the Canyons}{Santa Clarita, CA}
+      {General Education $|$ GPA: 3.80}{Aug. 2021 -- Jun. 2024}
+      \resumeItemListStart
+      \resumeItem{Relevant Courses: General Chemistry I \& II, Statistics, Calculus I \& II.}
+      \resumeItemListEnd
+      \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+      \resumeSubheading
+      {Tenart Tennis Platform Operations Intern}{Jun. 2026 -- Aug. 2026}{Shanghai Buba Sports \& Culture Co., Ltd. (Tenart)}{Shanghai, China}
+      \resumeItemListStart
+        \resumeItem{Built a SQLite pipeline integrating the Feishu API with trend logging and a validation framework for reproducible analysis.}
+        \resumeItem{Implemented a Dianping web scraper capturing 500+ reviews across 162 Shanghai tennis venues, quantifying competitive gaps such as parking friction cited 324 times across 40 venues.}
+        \resumeItem{Applied NLP tokenization and clustering via DeepSeek's API to competitor reviews; validated findings through statistical stability testing to support competitive positioning strategy.}
+        \resumeItem{Fit an ARIMA model on 35+ weeks of Baidu Index data, projecting a 15\% interest lift for the 2026 Shanghai Masters.}
+        \resumeItem{Delivered weekly bilingual (Chinese/English) KPI reports on trend analysis and competitive benchmarks to the founder.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+      {\textbf{SpiceRack} -- \emph{Python, Flask, Scikit-learn, NLP, TF-IDF, K-Means, SQLite, REST APIs}}{Oct. 2025 -- May. 2026}
+      \resumeItemListStart
+       \resumeItem{Led development as project manager for a ML-based recipe recommendation web app across ML, backend, and frontend tracks.}
+       \resumeItem{Designed a dual matrix NLP pipeline (TF-IDF to TruncatedSVD to MiniBatchKMeans) trained on 2.2M+ recipes across 475 flavor clusters; validated cluster quality via manual review of recipes and flavor profiles, confirming accurate recommendations.}
+       \resumeItem{Placed 3rd out of 100+ teams at the UCSB Data Science Club Project Showcase, validating end-to-end ML deployment from raw data to a production web app.}
+      \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{MLB Pitcher Injury Risk Prediction} -- \emph{R, XGBoost, K-Means, tidymodels}}{Jan. 2026 -- Mar. 2026}
+        \resumeItemListStart
+          \resumeItem{Built and validated 4 ML models (logistic regression, elastic net, random forest, XGBoost) on 30 years of Lahman Database pitching data, identifying total innings pitched as the leading injury risk factor.}
+          \resumeItem{Segmented pitchers into 3 archetypes via K-means; the highest workload group had nearly double the injury rate (26.6\%) of the lowest (14.1\%).}
+          \resumeItem{Tuned the final model to flag 80\% of at-risk pitchers; the top 10\% were injured at 53.6\%, nearly 3x the 19\% baseline.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------ACTIVITIES-----------
+\section{Activities}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Data Science Club (UCSB)} $|$ \emph{Member}}{Oct. 2024 -- Present}
+          \resumeItemListStart
+          \resumeItem{Competed in Datathon 2025, winning Best Sports Analyst Project, and presented as 2-time Project Pitchfire Finalist out of 100+ competing student teams.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Python, R, SQL, C++} \\
+     \textbf{Concepts}{: Machine Learning, Statistical Modeling, Classification, Clustering, Regression, Natural Language Processing, Tokenization, Time Series Forecasting, Computer Vision, Feature Engineering, A/B Testing, REST APIs} \\
+     \textbf{Libraries \& Frameworks}{: Scikit-Learn, XGBoost, tidymodels, statsmodels, Flask, Pandas, NumPy, OpenCV, Selenium, BeautifulSoup} \\
+     \textbf{Tools}{: Microsoft Excel, Feishu (Chinese productivity suite), Git, GitHub, Jupyter Notebook, VS Code, Docker, SQLite}\\     
+     \textbf{Languages (Spoken)}{: English (Native), Spanish (Elementary), Mandarin Chinese (Beginner)}
+    }}
+ \end{itemize}
+
+%-----------AWARDS & HONORS-----------
+\section{Awards \& Honors}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Dean's Honors, College of Letters \& Science \\
+     Datathon 2025: Best Sports Analyst Project \\
+     2x Project Pitchfire Finalist (SpiceRack, Anti-DUI)
+    }}
+ \end{itemize}
+
+\end{document}

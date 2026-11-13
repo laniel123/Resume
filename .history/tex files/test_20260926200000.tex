@@ -1,0 +1,125 @@
+% !TEX program = xelatex
+%-------------------------------------------------------------------
+% Daniel Larson - Resume (ATS-standard version)
+% - Times New Roman (compile with XeLaTeX), single column
+% - Body 10pt, section headings 12pt, name ~17pt
+% - No tables, no small caps, no icons, no columns
+% - Plain-text section headings: SUMMARY / EDUCATION / EXPERIENCE /
+%   PROJECTS / SKILLS / AWARDS
+% - Dates in "Mon YYYY - Mon YYYY" form on the same line as the entry
+% - Unicode text layer so every character copies/parses correctly
+%-------------------------------------------------------------------
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\usepackage[top=0.35in,bottom=0.35in,left=0.5in,right=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\hypersetup{
+  hidelinks,
+  pdftitle={Daniel Larson Resume},
+  pdfauthor={Daniel Larson},
+  pdfsubject={Resume},
+  pdfkeywords={Data Science, Data Analyst, Machine Learning, Python, R, SQL}
+}
+
+\pagestyle{empty}
+\raggedright
+\setlength{\parindent}{0pt}
+\urlstyle{same}
+
+% ---------- Section heading: 12pt uppercase text + rule ----------
+\newcommand{\resumeSection}[1]{%
+  \vspace{3pt}%
+  {\large\bfseries #1}\par
+  \vspace{-4pt}\rule{\linewidth}{0.4pt}\par
+  \vspace{1pt}%
+}
+
+% ---------- Entry lines (no tables; \hfill keeps text order) ----------
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill #2\par
+  \textit{#3}\hfill \textit{#4}\par
+}
+\newcommand{\projectEntry}[2]{%
+  #1\hfill #2\par
+}
+
+% ---------- Bullets: standard round text bullet ----------
+\setlist[itemize]{label=\textbullet, leftmargin=0.18in, topsep=1pt,
+  itemsep=0pt, parsep=0pt, partopsep=0pt}
+\newenvironment{bullets}{\begin{itemize}}{\end{itemize}\vspace{1pt}}
+
+%===================================================================
+\begin{document}
+
+%---------- HEADER ----------
+\begin{center}
+  {\LARGE\bfseries Daniel Larson}\par
+  \vspace{3pt}
+  661-476-0817 | Santa Clarita, CA | \href{mailto:lanieldarson@gmail.com}{lanieldarson@gmail.com} |
+  \href{https://www.linkedin.com/in/daniellarson1}{linkedin.com/in/daniellarson1} |
+  \href{https://github.com/laniel123}{github.com/laniel123}
+\end{center}
+
+%---------- SUMMARY ----------
+\resumeSection{SUMMARY}
+Statistics and Data Science student (UCSB) seeking Data Scientist and Data Analyst roles, with experience in statistical analysis, predictive analytics, machine learning pipelines, NLP systems, and forecasting models across sports analytics and startup settings; delivers measurable outcomes from raw data using Python, R, and SQL.
+
+%---------- EDUCATION ----------
+\resumeSection{EDUCATION}
+\entry{University of California, Santa Barbara}{Santa Barbara, CA}
+      {B.S. in Statistics and Data Science | GPA: 3.50}{Sep 2024 -- Expected Dec 2026}
+\begin{bullets}
+  \item Relevant Courses: Probability and Statistics, Principles of Data Science, Regression Analysis, Applied Stochastic Processes, Statistical Learning, Time Series, Design and Analysis of Experiments, Big Data Analysis.
+\end{bullets}
+\entry{College of the Canyons}{Santa Clarita, CA}
+      {General Education | GPA: 3.80}{Aug 2021 -- Jun 2024}
+
+%---------- EXPERIENCE ----------
+\resumeSection{EXPERIENCE}
+\entry{Platform Operations Intern}{Jun 2026 -- Aug 2026}
+      {Shanghai Buba Sports \& Culture Co., Ltd. (Tenart)}{Shanghai, China}
+\begin{bullets}
+  \item Built a SQLite database pipeline integrating the Feishu API with platform trend logging, backed by a custom validation framework for documented, reproducible trend analysis.
+  \item Implemented a Dianping web scraper mining 500+ reviews across 162 Shanghai tennis venues, allowing Tenart to make informed business decisions by quantifying gaps such as parking friction (cited 324 times across 40 venues).
+  \item Analyzed and translated competitor venues' Chinese customer reviews with DeepSeek's API, using NLP tokenization and clustering to identify recurring themes, validated through statistical stability testing to support competitive positioning strategy.
+  \item Forecast Chinese tennis interest with an ARIMA model (ADF stationarity testing, ACF/PACF order selection, AIC-based comparison) on 35+ weeks of Baidu Index data, linking interest to major tournaments and projecting a 15\% increase from the 2026 Shanghai Masters.
+  \item Delivered weekly bilingual (Chinese/English) KPI reports on trends and competitive benchmarks to the founder, while operating across on-court coaching and data science functions in a fast-paced startup environment.
+\end{bullets}
+
+%---------- PROJECTS ----------
+\resumeSection{PROJECTS}
+\projectEntry{\textbf{SpiceRack} -- \textit{Python, Flask, scikit-learn, NLP, TF-IDF, K-Means, SQLite, REST APIs}}{Oct 2025 -- May 2026}
+\begin{bullets}
+  \item Led development of an ML recipe recommendation web app; designed a dual-matrix NLP pipeline (TF-IDF to TruncatedSVD to MiniBatchKMeans) on 2.2M+ recipes across 475 flavor clusters, resolving a catch-all cluster failure mode to improve recommendation relevance.
+  \item Cut recommendation latency by engineering a top-K cosine similarity search with thread-safe REST API image caching, AJAX interactions, and a SQLite-backed saved recipes system.
+  \item Placed 3rd out of 100+ teams at the UCSB Data Science Club Project Showcase.
+\end{bullets}
+\projectEntry{\textbf{MLB Pitcher Injury Risk Prediction} -- \textit{R, XGBoost, K-Means, tidymodels}}{Jan 2026 -- Mar 2026}
+\begin{bullets}
+  \item Developed and validated 4 predictive models (logistic regression, elastic net, random forest, XGBoost) on 30 years of Lahman Database pitching data to predict next-season injury risk, identifying total innings pitched as the leading risk factor.
+  \item Segmented pitchers into 3 workload archetypes via K-means clustering; the highest-workload group carried nearly double the injury rate (26.6\%) of the lowest (14.1\%).
+  \item Tuned the final model to flag 80\% of at-risk pitchers; the top 10\% highest-risk group was injured at 53.6\%, nearly 3x the 19\% baseline.
+\end{bullets}
+
+%---------- SKILLS ----------
+\resumeSection{SKILLS}
+\textbf{Programming Languages:} Python, R, SQL, C++\par
+\textbf{Concepts:} Machine Learning, Statistical Analysis, Statistical Modeling, Predictive Analytics, Model Development, Probability, Classification, Clustering, Regression, Natural Language Processing, Time Series Forecasting, Data Mining, Data Preparation, Feature Engineering, Computer Vision, A/B Testing, REST APIs\par
+\textbf{Libraries \& Frameworks:} scikit-learn, XGBoost, tidymodels, statsmodels, Flask, pandas, NumPy, OpenCV, Selenium, BeautifulSoup\par
+\textbf{Tools:} Microsoft Excel, Feishu, Git, GitHub, Jupyter Notebook, VS Code, Docker, SQLite\par
+\textbf{Languages (Spoken):} English (Native), Spanish (Elementary), Mandarin Chinese (Beginner)\par
+
+%---------- AWARDS ----------
+\resumeSection{AWARDS}
+\begin{bullets}
+  \item Best Sports Analyst Project, UCSB Data Science Club Datathon 2025.
+  \item 2x Project Pitchfire Finalist (SpiceRack, Anti-DUI), UCSB Data Science Club, out of 100+ competing teams.
+  \item Dean's Honors, College of Letters \& Science, UCSB.
+\end{bullets}
+
+\end{document}
